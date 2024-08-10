@@ -21,7 +21,20 @@
 - Redis (for WebSocket handling)
 - Node.js (for front-end dependencies)
 
-### Setup
+
+
+### Prerequisites
+
+- Docker
+- Nginx (for load balancing)
+- Redis
+
+### Build and Run Docker Containers
+
+```bash
+docker build -t storyweave .
+docker run -d -p 8000:8000 storyweave
+
 
 1. **Clone the Repository:**
    ```bash
