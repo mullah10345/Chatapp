@@ -1,0 +1,12 @@
+<!-- core/templates/core/story_list.html -->
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>Story List</h2>
+  <ul>
+    {% for story in stories %}
+      <li><a href="{% url 'story_detail' story.id %}">{{ story.title }}</a></li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'create_story' %}">Create New Story</a>
+{% endblock %}

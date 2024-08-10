@@ -1,0 +1,16 @@
+<!-- core/templates/core/story_detail.html -->
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h2>{{ story.title }}</h2>
+  <div id="contributions">
+    {% for contribution in story.contributions.all %}
+      <p><strong>{{ contribution.contributed_by.username }}:</strong> {{ contribution.text }}</p>
+    {% endfor %}
+  </div>
+  <form id="contribution-form" method="POST">
+    {% csrf_token %}
+    <textarea name="text" placeholder="Add your contribution..."></textarea>
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
