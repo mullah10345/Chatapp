@@ -169,5 +169,4 @@ Create a New Branch
 Make Your Changes
 Commit and Push
 Create a Pull Request
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+
